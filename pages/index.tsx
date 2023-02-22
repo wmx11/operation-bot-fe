@@ -1,6 +1,7 @@
+import Home from '@/views/Home';
 import Head from 'next/head';
 import Image from 'next/image';
 
-export default function Home() {
-  return <></>;
+export default function HomePage() {
+  return <Home />;
 }

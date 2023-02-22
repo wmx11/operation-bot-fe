@@ -10,6 +10,28 @@ export default function App({ Component, pageProps }: AppProps) {
       withGlobalStyles
       withNormalizeCSS
       emotionCache={mantineCache}
+      theme={{
+        colorScheme: 'light',
+        components: {
+          Container: {
+            defaultProps: {
+              size: 'md',
+            },
+          },
+          Button: {
+            defaultProps: {
+              sx: {
+                background: '#5E9E5E',
+                '&:hover': {
+                  background: '#5E9E5E',
+                  filter: 'brightness(0.85)',
+                },
+              },
+            },
+          },
+        },
+        defaultRadius: 'lg',
+      }}
     >
       <Layout>
         <Component {...pageProps} />
