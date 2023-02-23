@@ -39,9 +39,9 @@ const Hero = () => {
           </Paper>
         </div>
       </Container>
-      <div className="absolute bg-obGreen rounded-full w-[120px] h-[120px] blur-[70px] top-0 left-[-60px]"></div>
-      <div className="absolute bg-obGreen rounded-full w-[300px] h-[300px] blur-[100px] top-[-150px] right-[-150px]"></div>
-      <div className="absolute bg-obGreen rounded-full w-[400px] h-[400px] blur-[200px] bottom-[-150px] left-[-150px]"></div>
+      <div className="absolute bg-obGreen rounded-full w-[120px] h-[120px] blur-[100px] top-0 left-[-60px]"></div>
+      <div className="absolute bg-obGreen rounded-full w-[300px] h-[300px] blur-[250px] top-[-150px] right-[-150px]"></div>
+      <div className="absolute bg-obGreen rounded-full w-[400px] h-[400px] blur-[400px] bottom-[-150px] left-[-150px]"></div>
     </div>
   );
 };

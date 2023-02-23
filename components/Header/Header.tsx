@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../Navigation';
 import Logo from 'public/images/logo.svg';
 import Image from 'next/image';
-import icons from '@/utils/icons';
+import Icons from '@/utils/icons';
 
 const Header = () => {
   return (
@@ -15,8 +15,8 @@ const Header = () => {
           </div>
           <Navigation />
           <div className="flex gap-4 items-center">
-            <Button rightIcon={<icons.External />}>MINT</Button>
-            <Button rightIcon={<icons.Wallet />}>CONNECT</Button>
+            <Button rightIcon={<Icons.External />}>MINT</Button>
+            <Button rightIcon={<Icons.Wallet />}>CONNECT</Button>
           </div>
         </div>
       </Container>

@@ -7,7 +7,7 @@ import LogoFull from 'public/images/logo_full.svg';
 
 const Footer = () => {
   return (
-    <div className="bg-obGray py-24">
+    <div className="bg-gradient-to-r  from-obGray to-zinc-800 py-24 relative overflow-hidden">
       <Container>
         <div className="flex items-start gap-16">
           <div>
@@ -49,6 +49,8 @@ const Footer = () => {
           ))}
         </div>
       </Container>
+      <div className="absolute bg-obGreen rounded-full w-[320px] h-[320px] blur-[200px] top-0 left-[-60px]"></div>
+      <div className="absolute bg-red-500/80 rounded-full w-[220px] h-[220px] blur-[150px] top-0 right-[-60px] opacity-50"></div>
     </div>
   );
 };

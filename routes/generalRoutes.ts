@@ -3,7 +3,8 @@ const generalRoutes = {
   privacyPolicy: '/',
   about: '/',
   profile: '/',
-  cookiePolicy: '/'
+  cookiePolicy: '/',
+  disclaimer: '/disclaimer',
 };
 
 export default generalRoutes;

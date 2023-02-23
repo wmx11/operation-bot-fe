@@ -1,4 +1,5 @@
-import icons from './icons';
+import generalRoutes from '@/routes/generalRoutes';
+import Icons from './icons';
 
 export const mainMenu = [
   {
@@ -17,15 +18,15 @@ export const mainMenu = [
 
 export const socials = [
   {
-    Icon: icons.Discord,
+    Icon: Icons.Discord,
     href: '/',
   },
   {
-    Icon: icons.Telegram,
+    Icon: Icons.Telegram,
     href: '/',
   },
   {
-    Icon: icons.Twitter,
+    Icon: Icons.Twitter,
     href: '/',
   },
 ];
@@ -77,7 +78,7 @@ export const footerMenu = [
       },
       {
         label: 'Disclaimer',
-        href: '/',
+        href: generalRoutes.disclaimer,
       },
     ],
   },
