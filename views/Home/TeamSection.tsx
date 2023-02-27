@@ -6,10 +6,7 @@ const TeamSection = () => {
     <section className="mb-24">
       <Container className="py-24">
         <>
-          <Title
-            className="text-6xl mb-16 text-secondaryGreen distress"
-            align="center"
-          >
+          <Title className="text-6xl mb-16 text-secondaryGreen" align="center">
             TEAM
           </Title>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 py-10">

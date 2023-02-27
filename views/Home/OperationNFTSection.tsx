@@ -49,23 +49,23 @@ const OperationNFTSection = () => {
               ]}
             />
           </div>
-          <div className="flex flex-col gap-4">
-            <Text weight={700} className="text-3xl italic">
+          <div className="flex flex-col gap-4 z-10">
+            <Text weight={700} className="text-3xl italic z-10">
               Notes:
             </Text>
-            <Text>
+            <Text className="z-10">
               <strong>Price</strong> = the amount of money you will pay to
               purchase the NFT
             </Text>
-            <Text>
+            <Text className="z-10">
               <strong> Weekly bounty</strong> = the amount of $ you will be paid
               each week you claim
             </Text>
-            <Text>
+            <Text className="z-10">
               <strong>Annual bounty</strong> = is the initial price paid for the
               NFT multiplied by the reward factor.
             </Text>
-            <Text>
+            <Text className="z-10">
               <Text weight={700}>Example</Text>
               When you buy a Chief NFT, you pay $10,000. Each week you will earn
               $800. After 52 weeks, you will have claimed $41,600 (10,000*4.16).

@@ -13,8 +13,7 @@ const Hero = () => {
             {isComplete ? (
               <>
                 {' '}
-                OPERATION:{' '}
-                <span className="text-secondaryGreen distress">BOT</span>
+                OPERATION: <span className="text-secondaryGreen">BOT</span>
               </>
             ) : (
               <Typed
@@ -35,7 +34,7 @@ const Hero = () => {
             </Text>
           </Text>
 
-          <div className="stamp flex flex-col md:flex-row items-start justify-between p-8 gap-8 text-primaryRed rounded-xl">
+          <div className="rotate-1 border-8 border-primaryRed flex flex-col md:flex-row items-start justify-between p-8 gap-8 text-primaryRed rounded-xl">
             <div className="text-center">
               <Title order={2} className="text-6xl mb-2">
                 +${(150000).toLocaleString()}

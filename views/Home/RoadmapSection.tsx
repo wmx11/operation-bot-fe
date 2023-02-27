@@ -5,9 +5,7 @@ const RoadmapSection = () => {
   return (
     <section>
       <Container className="pt-24">
-        <Title className={`text-6xl mb-16 text-secondaryGreen distress`}>
-          ROADMAP
-        </Title>
+        <Title className={`text-6xl mb-16 text-secondaryGreen`}>ROADMAP</Title>
       </Container>
       <div className="mb-24 overflow-auto">
         <Timeline

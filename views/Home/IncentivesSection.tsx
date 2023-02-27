@@ -4,7 +4,7 @@ const IncentivesSection = () => {
   return (
     <section>
       <Container className="py-24">
-        <Title className={`text-6xl mb-16 text-secondaryGreen distress`}>
+        <Title className={`text-6xl mb-16 text-secondaryGreen`}>
           INCENTIVES
         </Title>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
