@@ -7,7 +7,7 @@ import Icons from '@/utils/icons';
 
 const Header = () => {
   return (
-    <div className="border-b border-obGray/20 backdrop-blur-sm">
+    <div className="border-b backdrop-blur-md sticky top-0 z-20">
       <Container>
         <div className="flex items-center justify-between py-6">
           <div>

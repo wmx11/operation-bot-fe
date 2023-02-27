@@ -6,8 +6,8 @@ import React from 'react';
 const index = () => {
   return (
     <article>
-      <Container className={styles.containerPadding}>
-        <Title className={`${styles.sectionTitle} text-obGreen`}>
+      <Container className="py-10">
+        <Title className={`text-6xl mb-16 text-secondaryGreen`}>
           Signals & Codes (Disclaimer)
         </Title>
         <div className="flex flex-col gap-6">

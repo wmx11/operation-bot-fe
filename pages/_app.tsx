@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
       emotionCache={mantineCache}
       theme={{
         colorScheme: 'light',
+        black: '#4F4F4F',
         components: {
           Container: {
             defaultProps: {

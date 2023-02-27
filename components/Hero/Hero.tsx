@@ -1,15 +1,30 @@
 import { Container, Paper, Text, Title } from '@mantine/core';
-import React from 'react';
+import { useState } from 'react';
+import Typed from 'react-typed';
+import Typical from 'react-typical';
 
 const Hero = () => {
+  const [isComplete, setIsComplete] = useState(false);
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <Container className="py-24 grid grid-cols-[1fr,350px]">
-        <div>
-          <Title className="text-6xl mb-4">
-            OPERATION: <span className="text-obGreen">BOT</span>
+    <div className="relative min-h-screen">
+      <Container className="py-24">
+        <div className="flex flex-col items-center gap-4">
+          <Title className="text-5xl md:text-8xl mb-4">
+            {isComplete ? (
+              <>
+                {' '}
+                OPERATION:{' '}
+                <span className="text-secondaryGreen distress">BOT</span>
+              </>
+            ) : (
+              <Typed
+                strings={['OPERATION: BOT']}
+                typeSpeed={100}
+                onComplete={() => setIsComplete(true)}
+              />
+            )}
           </Title>
-          <Text className="flex flex-col gap-4 text-lg mb-16">
+          <Text className="flex flex-col gap-4 md:text-xl mb-16 text-center">
             Self-learning software that is fed with data and strategies from a
             professional trader.
             <Text>
@@ -20,28 +35,29 @@ const Hero = () => {
             </Text>
           </Text>
 
-          <Paper
-            shadow="lg"
-            className="flex items-start justify-between p-8 bg-gradient-to-r from-obGreen to-obGray"
-          >
-            <div className="text-white text-center">
-              <Title order={2} className="text-5xl">
+          <div className="stamp flex flex-col md:flex-row items-start justify-between p-8 gap-8 text-primaryRed rounded-xl">
+            <div className="text-center">
+              <Title order={2} className="text-6xl mb-2">
                 +${(150000).toLocaleString()}
               </Title>
-              <Text>Total Capital</Text>
+              <Text className="text-xl">Total Capital</Text>
             </div>
-            <div className="text-white text-center">
-              <Title order={2} className="text-5xl">
+            <div className="text-center">
+              <Title order={2} className="text-6xl mb-2">
                 +${(800000).toLocaleString()}
               </Title>
-              <Text>Profit</Text>
+              <Text className="text-xl">Profit</Text>
             </div>
-          </Paper>
+          </div>
         </div>
       </Container>
-      <div className="absolute bg-obGreen rounded-full w-[120px] h-[120px] blur-[100px] top-0 left-[-60px]"></div>
-      <div className="absolute bg-obGreen rounded-full w-[300px] h-[300px] blur-[250px] top-[-150px] right-[-150px]"></div>
-      <div className="absolute bg-obGreen rounded-full w-[400px] h-[400px] blur-[400px] bottom-[-150px] left-[-150px]"></div>
+      <div className="absolute bg-secondaryGreen rounded-full w-[400px] h-[400px] blur-[400px] top-[-150px] left-[-60px]"></div>
+      <div className="absolute bg-secondaryGreen rounded-full w-[400px] h-[400px] blur-[400px] top-[-150px] right-[-150px]"></div>
+      <div className="absolute bg-secondaryOrange rounded-full w-[400px] h-[400px] blur-[400px] bottom-[-150px] right-[-150px]"></div>
+      <div className="absolute bg-primaryRed rounded-full w-[400px] h-[400px] blur-[400px] bottom-[-150px] left-[-150px]"></div>
+      {/* <div className="absolute p-4 text-primaryRed text-8xl font-bold border-8 border-primaryRed rounded-lg rotate-45 right-0 bottom-[400px] opacity-40 -z-10">
+        DECLASSIFIED
+      </div> */}
     </div>
   );
 };
