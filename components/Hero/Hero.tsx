@@ -1,7 +1,6 @@
-import { Container, Paper, Text, Title } from '@mantine/core';
+import { Container, Text, Title } from '@mantine/core';
 import { useState } from 'react';
 import Typed from 'react-typed';
-import Typical from 'react-typical';
 
 const Hero = () => {
   const [isComplete, setIsComplete] = useState(false);
@@ -12,12 +11,11 @@ const Hero = () => {
           <Title className="text-5xl md:text-8xl mb-4">
             {isComplete ? (
               <>
-                {' '}
-                OPERATION: <span className="text-secondaryGreen">BOT</span>
+                OPERATION: <span className="text-secondaryGreen">BOT.</span>
               </>
             ) : (
               <Typed
-                strings={['OPERATION: BOT']}
+                strings={['OPERATION: BOT.']}
                 typeSpeed={100}
                 onComplete={() => setIsComplete(true)}
               />
