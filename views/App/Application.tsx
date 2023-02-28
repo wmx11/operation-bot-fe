@@ -6,7 +6,7 @@ import React from 'react';
 const Application = () => {
   return (
     <div>
-      <Paper withBorder shadow="md" className="relative z-10 p-6 mb-">
+      <Paper withBorder shadow="md" className="relative z-10 p-6 mb-16">
         <Title className="mb-4">Profile Overview</Title>
         <Text className="mb-4">
           Please connect your wallet in order to view your NFT collection, claim
