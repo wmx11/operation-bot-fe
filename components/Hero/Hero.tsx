@@ -1,6 +1,24 @@
 import { Container, Text, Title } from '@mantine/core';
 import { useState } from 'react';
 import Typed from 'react-typed';
+import { motion, Variants } from 'framer-motion';
+
+const variants: Variants = {
+  offscreen: {
+    y: 100,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    rotate: 2,
+    transition: {
+      type: 'spring',
+      bounce: 0.3,
+      duration: 0.8,
+    },
+  },
+};
 
 const Hero = () => {
   const [isComplete, setIsComplete] = useState(false);
@@ -32,20 +50,32 @@ const Hero = () => {
             </Text>
           </Text>
 
-          <div className="rotate-1 border-8 border-primaryRed flex flex-col md:flex-row items-start justify-between p-8 gap-8 text-primaryRed rounded-xl">
-            <div className="text-center">
-              <Title order={2} className="text-6xl mb-2">
-                +${(150000).toLocaleString()}
-              </Title>
-              <Text className="text-xl">Total Capital</Text>
-            </div>
-            <div className="text-center">
-              <Title order={2} className="text-6xl mb-2">
-                +${(800000).toLocaleString()}
-              </Title>
-              <Text className="text-xl">Profit</Text>
-            </div>
-          </div>
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            whileHover={{ rotate: 0 }}
+            viewport={{ once: true, amount: 0.8 }}
+            className="relative"
+          >
+            <motion.div
+              whileHover={{ rotate: 0, scale: 1.1 }}
+              variants={variants}
+              className="rotate-1 bg-[url(../public/images/paper.jpg)] bg-cover shadow-lg flex flex-col md:flex-row items-start justify-between p-8 gap-8"
+            >
+              <div className="text-center">
+                <Title order={2} className="text-6xl mb-2">
+                  +${(150000).toLocaleString()}
+                </Title>
+                <Text className="text-xl">Total Capital</Text>
+              </div>
+              <div className="text-center">
+                <Title order={2} className="text-6xl mb-2">
+                  +${(800000).toLocaleString()}
+                </Title>
+                <Text className="text-xl">Profit</Text>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </Container>
       <div className="absolute bg-secondaryGreen rounded-full w-[400px] h-[400px] blur-[400px] top-[-150px] left-[-60px]"></div>

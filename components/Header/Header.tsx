@@ -4,6 +4,7 @@ import Navigation from '../Navigation';
 import Logo from 'public/images/logo.svg';
 import Image from 'next/image';
 import Icons from '@/utils/icons';
+import WalletConnect from '../WalletConnect';
 
 const Header = () => {
   return (
@@ -15,8 +16,10 @@ const Header = () => {
           </div>
           <Navigation />
           <div className="flex gap-4 items-center">
-            <Button rightIcon={<Icons.External />}>MINT</Button>
-            <Button rightIcon={<Icons.Wallet />}>CONNECT</Button>
+            <Button rightIcon={<Icons.External />} size="md">
+              Mint
+            </Button>
+            <WalletConnect />
           </div>
         </div>
       </Container>

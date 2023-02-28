@@ -1,6 +1,5 @@
 import PaperStack from '@/components/PaperStack';
 import Table from '@/components/Table/Table';
-
 import { Container, Text, Title } from '@mantine/core';
 
 const OperationNFTSection = () => {
@@ -23,7 +22,9 @@ const OperationNFTSection = () => {
               rows={[
                 { row: ['Grunt', '$20.00', '$1.00', '2.6', '$52.00'] },
                 { row: ['Corporal', '$100.00', '$5.50', '2.86', '$286.00'] },
-                { row: ['Sergeant', '$500.00', '$30.00', '3.12', '$1,560.00'] },
+                {
+                  row: ['Sergeant', '$500.00', '$30.00', '3.12', '$1,560.00'],
+                },
                 {
                   row: [
                     'Lieutenant',
@@ -33,7 +34,9 @@ const OperationNFTSection = () => {
                     '$4,225.00',
                   ],
                 },
-                { row: ['Major', '$2,500.00', '$175.00', '3.64', '$9,100.00'] },
+                {
+                  row: ['Major', '$2,500.00', '$175.00', '3.64', '$9,100.00'],
+                },
                 {
                   row: [
                     'Commander',
