@@ -4,8 +4,20 @@ import { MantineProvider } from '@mantine/core';
 import mantineCache from '@/mantineCache';
 import Layout from '@/components/Layout';
 import { ThirdwebProvider } from '@thirdweb-dev/react';
+import { NextPage } from 'next';
+import { ReactElement, ReactNode } from 'react';
 
-export default function App({ Component, pageProps }: AppProps) {
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page);
+
   return (
     <MantineProvider
       withGlobalStyles
@@ -26,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 background: '#5E9E5E',
                 '&:hover': {
                   background: '#5E9E5E',
-                  filter: 'brightness(0.85)',
+                  opacity: 0.9,
                 },
               },
             },
@@ -44,9 +56,7 @@ export default function App({ Component, pageProps }: AppProps) {
           authUrl: '/api/auth',
         }}
       >
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
       </ThirdwebProvider>
     </MantineProvider>
   );

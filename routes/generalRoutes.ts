@@ -5,6 +5,7 @@ const generalRoutes = {
   profile: '/',
   cookiePolicy: '/',
   disclaimer: '/disclaimer',
+  application: '/app',
 };
 
 export default generalRoutes;

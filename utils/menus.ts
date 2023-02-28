@@ -8,7 +8,7 @@ export const mainMenu = [
   },
   {
     label: 'Application',
-    href: '/',
+    href: generalRoutes.application,
   },
   {
     label: 'Litepaper',

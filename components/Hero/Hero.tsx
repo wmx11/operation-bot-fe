@@ -2,6 +2,7 @@ import { Container, Text, Title } from '@mantine/core';
 import { useState } from 'react';
 import Typed from 'react-typed';
 import { motion, Variants } from 'framer-motion';
+import Backdrop from '../Backdrop';
 
 const variants: Variants = {
   offscreen: {
@@ -78,13 +79,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </Container>
-      <div className="absolute bg-secondaryGreen rounded-full w-[400px] h-[400px] blur-[400px] top-[-150px] left-[-60px]"></div>
-      <div className="absolute bg-secondaryGreen rounded-full w-[400px] h-[400px] blur-[400px] top-[-150px] right-[-150px]"></div>
-      <div className="absolute bg-secondaryOrange rounded-full w-[400px] h-[400px] blur-[400px] bottom-[-150px] right-[-150px]"></div>
-      <div className="absolute bg-primaryRed rounded-full w-[400px] h-[400px] blur-[400px] bottom-[-150px] left-[-150px]"></div>
-      {/* <div className="absolute p-4 text-primaryRed text-8xl font-bold border-8 border-primaryRed rounded-lg rotate-45 right-0 bottom-[400px] opacity-40 -z-10">
-        DECLASSIFIED
-      </div> */}
+      <Backdrop />
     </div>
   );
 };
