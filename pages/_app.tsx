@@ -26,6 +26,10 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       theme={{
         colorScheme: 'light',
         black: '#4F4F4F',
+        fontFamily: 'Courier Prime, monospace',
+        headings: {
+          fontFamily: 'Courier Prime, monospace',
+        },
         components: {
           Container: {
             defaultProps: {
