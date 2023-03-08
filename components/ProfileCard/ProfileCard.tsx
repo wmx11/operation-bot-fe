@@ -23,7 +23,7 @@ const ProfileCard: FC<ProfileCardTypes> = ({
       className={`${className} relative px-8 py-24 hover:scale-105 hover:rotate-0 transition bg-gradient-to-b from-slate-200 to-zinc-300/80 rounded-[20px] flex flex-col items-center gap-6 shadow-lg even:rotate-1 odd:-rotate-1 overflow-hidden`}
     >
       <div className="p-3 bg-white absolute rounded-full shadow-[inset_0px_1px_2px_rgba(0,0,0,0.5)] top-5 z-10"></div>
-      <div className="flex flex-col items-center z-10">
+      <div className="flex flex-col items-center z-10 text-center">
         <div className="bg-secondaryGray w-[150px] h-[150px] rounded-full mb-2 relative overflow-hidden">
           <img src={image} alt="" className="absolute inset-0" />
         </div>
